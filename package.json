@@ -1,0 +1,24 @@
+{
+  "name": "switches",
+  "version": "1.0.0",
+  "description": "A webapp that collates a list of mechanical keyboard switches for a CS3219 assignment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KxxMxxx/Switches.git"
+  },
+  "author": "Lew Kai Ming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KxxMxxx/Switches/issues"
+  },
+  "homepage": "https://github.com/KxxMxxx/Switches#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3"
+  }
+}
