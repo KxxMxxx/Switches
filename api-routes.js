@@ -9,5 +9,19 @@ router.get('/', function (request, response) {
     });
 });
 
+// Import switch controller
+var switchController = require('./switch/controller.js');
+
+// switch routes
+router.route('/switches')
+    .get(switchController.index)
+    .post(switchController.new);
+
+router.route('/switches/:name')
+    .get(switchController.view)
+    .patch(switchController.update)
+    .put(switchController.update)
+    .delete(switchController.delete);
+
 // Export API routes
 module.exports = router;
