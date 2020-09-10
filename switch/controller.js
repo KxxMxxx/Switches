@@ -1,5 +1,5 @@
 // Import Switch model
-var KeySwitch = require('./model.js');
+var KeySwitch = require('./model');
 
 // Handle index actions
 exports.index = function (request, response) {
@@ -45,7 +45,7 @@ exports.new = function (request, response) {
 // Handle view switch info
 // GET /api/switches/{name}
 exports.view = function (request, response) {
-    KeySwitch.find({
+    KeySwitch.findOne({
         name: request.params.name
     }, function (error, keySwitch) {
         if (error) {
@@ -62,7 +62,7 @@ exports.view = function (request, response) {
 // Handle update switch info
 // PUT /api/switches/{name}
 exports.update = function (request, response) {
-    KeySwitch.find({
+    KeySwitch.findOne({
         name: request.params.name
     }, function (error, keySwitch) {
         if (error) {
@@ -71,7 +71,7 @@ exports.update = function (request, response) {
             keySwitch.name = request.body.name;
             keySwitch.type = request.body.type;
             keySwitch.actuation = request.body.actuation;
-            keySwitch.bottom = requst.body.bottom;
+            keySwitch.bottom = request.body.bottom;
             keySwitch.travel = request.body.travel;
 
             // save the switch and check for errors
@@ -100,7 +100,7 @@ exports.delete = function (request, response) {
         } else {
             response.json({
                 status: "success",
-                message: "switch deleted",
+                message: "Switch deleted",
             });
         }
     });

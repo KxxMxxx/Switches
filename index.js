@@ -40,3 +40,6 @@ app.use('/api', apiRoutes);
 app.listen(port, function() {
     console.log("Running Switches on port " + port);
 });
+
+// Export app for testing
+module.exports = app;
