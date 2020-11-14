@@ -25,4 +25,4 @@ deploy:
   edge: true
   on:
     branch:
-      - main
+      - master
