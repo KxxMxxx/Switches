@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb+srv://Me:0yMdx7SB2eJ8MwVM@cs3219-otot-b.xcwlm.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Me:yphXCFipZcbOSGXk@cs3219-otot-b.xcwlm.mongodb.net/<dbname>?retryWrites=true&w=majority', {
     useNewUrlParser: true,
 });
 
