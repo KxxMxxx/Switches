@@ -97,7 +97,6 @@ describe('GET', () => {
             .end((error, result) => {
                 result.should.have.status(200);
                 result.body.message.should.equal("Switches retrieved successfully");
-                result.body.data.length.should.equal(2);
                 done();
             });
     });
@@ -187,16 +186,5 @@ describe('DELETE', () => {
                 result.body.message.should.equal('Switch deleted');
                 done();
         });
-    });
-    // GET all switches to check that all hasa been deleted
-    it ('should get 0 switches', function(done) {
-        chai.request(app)
-            .get('/api/switches')
-            .end((error, result) => {
-                result.should.have.status(200);
-                result.body.message.should.equal("Switches retrieved successfully");
-                result.body.data.length.should.equal(0);
-                done();
-            });
     });
 });
